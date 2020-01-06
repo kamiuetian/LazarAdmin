@@ -2,6 +2,24 @@ import React, { Component } from 'react';
 import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
 class Register extends Component {
+  constructor(props)
+  {
+    super(props);
+    this.state={
+      email:"",
+      Name:"",
+      password:"",
+      register_errors:""
+    }
+    //this.handleRegisteration=this.handleRegisteration.bind(this);
+    
+    
+  }
+  handleRegisteration=(event)=>
+    {
+      event.preventDefault();
+      this.props.history.push("/login");
+    }
   render() {
     return (
       <div className="app flex-row align-items-center">
@@ -10,7 +28,7 @@ class Register extends Component {
             <Col md="9" lg="7" xl="6">
               <Card className="mx-4">
                 <CardBody className="p-4">
-                  <Form>
+                  <Form onSubmit={this.handleRegisteration}>
                     <h1>Register</h1>
                     <p className="text-muted">Create your account</p>
                     <InputGroup className="mb-3">

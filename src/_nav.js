@@ -19,7 +19,7 @@ export default {
       class: ''             // optional class names space delimited list for title item ex: "text-center"
     },
     {
-      name: 'Colors',
+      name: 'Raang',
       url: '/theme/colors',
       icon: 'icon-drop',
     },

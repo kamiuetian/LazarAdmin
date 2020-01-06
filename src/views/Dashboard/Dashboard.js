@@ -1,5 +1,6 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { Bar, Line } from 'react-chartjs-2';
+import Cookies from 'universal-cookie';
 import {
   Badge,
   Button,
@@ -455,7 +456,8 @@ const mainChartOpts = {
 class Dashboard extends Component {
   constructor(props) {
     super(props);
-
+    const cookies=new Cookies();
+    console.log(cookies.get('register'))
     this.toggle = this.toggle.bind(this);
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
 

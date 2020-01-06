@@ -40,7 +40,7 @@ class DefaultHeader extends Component {
           </NavItem>
         </Nav>
         <Nav className="ml-auto" navbar>
-          <NavItem className="d-md-down-none">
+         {/* <NavItem className="d-md-down-none">
             <NavLink to="#" className="nav-link"><i className="icon-bell"></i><Badge pill color="danger">5</Badge></NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
@@ -68,9 +68,9 @@ class DefaultHeader extends Component {
               <DropdownItem><i className="fa fa-shield"></i> Lock Account</DropdownItem>
               <DropdownItem onClick={e => this.props.onLogout(e)}><i className="fa fa-lock"></i> Logout</DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown>
+          </UncontrolledDropdown>*/}
         </Nav>
-        <AppAsideToggler className="d-md-down-none" />
+        {/*<AppAsideToggler className="d-md-down-none" />*/}
         {/*<AppAsideToggler className="d-lg-none" mobile />*/}
       </React.Fragment>
     );

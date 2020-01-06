@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-
+import Cookies from 'universal-cookie'
 class Login extends Component {
+  constructor(props)
+  {
+    super(props);
+    this.handleLogin=this.handleLogin.bind(this);
+  }
+handleLogin=(event)=>
+{
+event.preventDefault();
+const cookies=new Cookies();
+cookies.set('register','kamran');
+this.props.history.push("/dashboard");
+}
   render() {
     return (
       <div className="app flex-row align-items-center">
@@ -12,7 +24,7 @@ class Login extends Component {
               <CardGroup>
                 <Card className="p-4">
                   <CardBody>
-                    <Form>
+                    <Form onSubmit={this.handleLogin}>
                       <h1>Login</h1>
                       <p className="text-muted">Sign In to your account</p>
                       <InputGroup className="mb-3">
